@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>NRC Registration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+
+				<!-- Scripts -->
+			<script type="text/javascript" src="assets/js/confirm.js"></script>
+						
+	</head>
+	
+	
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">NRC Registration</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="#">Background Information</a></li>
+								<li><a href="query.html">Administrator Login</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Register Your Details</a></h2>
+										<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+									</div>
+								</header>
+									<form id="SignUpForm" name="SignUpForm" method="post" action="/nrc/submit">
+								        <fieldset>
+								            <legend> Personal Information</legend>
+								            <label for="nrcNumber">NRC Number: </label>
+								            <input class="nrcSlashed" name="nrc_no1" id="nrc_no1" type="text" size="6" maxlength="6" />
+								            <input class="nrcSlashed" name="nrc_no2" id="nrc_no2" type="text" size="2" maxlength="2"/>
+								            <input class="nrcSlashed" name="nrc_no3" id="nrc_no3" type="text" size="1" maxlength="1"/>
+								            
+								            <label for="firstName">First Name: </label>
+								            <input class="regText" id="first_name" type="text"/>
+								            <label for="middleName">Middle Name(s): </label>
+								            <input class="regText" id="middle_name" type="text"/>
+								            <label for="lastName">Last Name: </label>
+								            <input class="regText" id="last_name" type="text" />
+								            <label for="Date of Birth">Date of Birth: </label>
+								            <input id="date_of_birth" type="date" />
+								            
+								            <label for="placeOfBirth">Place of Birth: </label>
+								            <select id="province_of_birth">
+								            	<option style="display: none">-- select the province --</option>
+								            	<option value="Copperbelt">Copperbelt</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            <select id="district_of_birth">
+								            	<option style="display: none">-- select the district --</option>
+								            	<option value="Ndola">Ndola</option>
+								            	<option value="Kitwe">Kabwe</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            <select id="town_of_birth">
+								            	<option style="display: none">-- select the town --</option>
+								            	<option value="Ndola">Ndola</option>
+								            	<option value="Kitwe">Kabwe</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            
+								            <label for="genderLabel"> Gender </label>
+								            <select id="gender">
+								            	<option style="display: none"  disabled="disabled">-- select a gender --</option>
+								            	<option value="Male">Male</option>
+								                <option value="Female">Female</option>
+								            </select>
+								        <br/><br/>
+								        <br/>                
+								        </fieldset>
+								        
+								        <fieldset>
+								        <legend> Parent's Details </legend>    
+								            <label for="Chief">Chief: </label>
+								            <select id="chief">
+								            	<option style="display: none">-- select an option --</option>
+								            	<option value="Mwamba">Mwamba</option>
+								                <option value="Kafwimbi">Kafwimbi</option>
+								                <option value="Magodi">Magodi</option>
+								            </select>
+								            
+								            <label for="villageLabel">Village: </label>
+								            <select id="village_district">
+								            	<option style="display: none">-- select the district --</option>
+								            	<option value="Ndola">Ndola</option>
+								            	<option value="Kitwe">Kabwe</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            <select id="village">
+								            	<option style="display: none">-- select the village --</option>
+								            	<option value="Ntema">Ntema</option>
+								                <option value="Isoka">Isoka</option>
+								                <option value="Nakonde">Nakonde</option>
+								            </select>
+								            
+								            
+								            <label for="parentsProvinceLabel">Parent's Place of Birt</label>
+								            <select id="parent_province_of_birth" name="parent_province_of_birth">
+								            	<option style="display: none">-- select the province --</option>
+								            	<option value="Copperbelt">Copperbelt</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            <select id="parent_district_of_birth">
+								            	<option style="display: none">-- select the district --</option>
+								            	<option value="Ndola">Ndola</option>
+								            	<option value="Kitwe">Kabwe</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            <select id="parent_town_of_birth">
+								            	<option style="display: none">-- select the town --</option>
+								            	<option value="Ndola">Ndola</option>
+								            	<option value="Kitwe">Kabwe</option>
+								                <option value="Lusaka">Lusaka</option>
+								            </select>
+								            
+								        <br/><br/>
+								        <br/>    
+								        </fieldset>
+								        
+								        <fieldset>
+								        <legend> Card's Details </legend>
+								        	<label for="cardNumber">Card No: </label>
+								            <input class="cardNumber" name="card_no" id="card_no" type="text" size="8" maxlength="8" />
+								            <label for="Date of Issue">Date card was issued: </label>
+								            <input id="date_of_issue" type="date" />
+								            <label for="Date of Birth">Renunciation Date: </label>
+								            <input id="renounce_date" type="date" />
+								        <br/><br/>
+								        </fieldset>
+								        
+								        <fieldset>
+								        	<label for="image"> Image: </label>
+								        	<input id="personalPhoto" type="file"/>
+								        	
+								        <br/><br/>
+								        </fieldset>
+
+
+								        <p>
+								            <input id="confirmButton" type="button" value="Done" style="display:"  onclick="confirmForm()" />
+								            <input id="submitButton" type="submit" value="Click Here to Complete" style="display: none"/>
+								        </p>
+								        </form>
+							</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Left Side Intro -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								<header>
+									<h2>NRC Registration</h2>
+									<p>Another fine responsive site template by HTML5 UP</a></p>
+								</header>
+							</section>
+
+
+						<!-- About -->
+							<section class="blurb">
+								<h2>About</h2>
+								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Learn More</a></li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+									<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+								<p class="copyright">&copy; Untitled. Design: Copyright Information</a>. Images: <a></a>.</p>
+							</section>
+
+					</section>
+
+			</div>
+
+	</body>
+</html>

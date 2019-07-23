@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>NRC Registration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<link rel="stylesheet" href="assets/css/main.css" />
+						
+	</head>
+	
+	
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">NRC Registration</a></h1>
+						<nav class="links">
+							<!-- <ul>
+								<li><a href="#">Background Information</a></li>
+								<li><a href="#">Administrator Login</a></li>
+							</ul> -->
+						</nav>
+					</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Register Your Details</a></h2>
+										<p>Enter all of your National Registration card details in the form below.</p>
+									</div>
+								</header>
+									<form id="SignUpForm" name="SignUpForm" method="post" action="/nrc/submit">
+								        <fieldset>
+								            <legend> Personal Information</legend>
+								            <label for="nrcNumber">NRC Number: </label>
+								            <input class="nrcSlashed" name="nrc_no1" id="nrc_no1" type="text" size="6" maxlength="6" />
+								            <input class="nrcSlashed" name="nrc_no2" id="nrc_no2" type="text" size="2" maxlength="2"/>
+								            <input class="nrcSlashed" name="nrc_no3" id="nrc_no3" type="text" size="1" maxlength="1"/>
+								            
+								            <label for="firstName">First Name: </label>
+								            <input class="regText" id="first_name" name="first_name" type="text"/>
+								            <label for="middleName">Middle Name(s): </label>
+								            <input class="regText" id="middle_name" name="middle_name" type="text"/>
+								            <label for="lastName">Last Name: </label>
+								            <input class="regText" id="last_name" name="last_name" type="text" />
+								            <label for="Date of Birth">Date of Birth: </label>
+								            <input id="date_of_birth" name="date_of_birth" type="date" />
+								            
+								            <label for="placeOfBirth">Place of Birth: </label>
+								            <select id="province_of_birth" name="province_of_birth" onchange="getPOBDistrictByProvince('district_of_birth','province_of_birth')">
+								            	<option style="display: none">-- select the province --</option>
+								            	
+								            </select>
+								            <select id="district_of_birth" name="district_of_birth">
+								            	<option style="display: none">-- select the district --</option>
+								            	
+								            </select>
+								            <select id="town_of_birth" name="town_of_birth">
+								            	<option style="display: none">-- select the town --</option>
+								            	
+								            </select>
+								            
+								            <label for="genderLabel"> Gender </label>
+								            <select id="gender" name="gender">
+								            	<option style="display: none"  disabled="disabled">-- select a gender --</option>
+								            	<option value="Male">Male</option>
+								                <option value="Female">Female</option>
+								            </select>
+								        <br/><br/>
+								        <br/>                
+								        </fieldset>
+								        
+								        <fieldset>
+								        <legend> Parent's Details </legend>    
+								            <label for="villageLabel">Village: </label>
+								            <select id="village_province" name="village_province" onchange=" getPOBDistrictByProvince('village_district','village_province')">
+								            	<option style="display: none">-- select the province --</option>
+								            </select>
+								            
+								            <select id="village_district" name="village_district" onchange="getVillageByDistrict('village_district','village')">
+								            	<option style="display: none">-- select the district --</option>
+								            </select>
+								            <select id="village" name="village" onchange="getChiefByVillage('village','chief')">
+								            	<option style="display: none">-- select the village --</option>
+								         
+								            </select>
+								            <label for="Chief">Chief: </label>
+								            <select id="chief" name="chief">
+								            	<option style="display: none">-- select an option --</option>
+								            
+								            </select>
+								            
+								            
+								            
+								            <label for="parentsProvinceLabel">Parent's Place of Birth:</label>
+								            <select id="parent_province_of_birth" name="parent_province_of_birth" onchange="getPOBDistrictByProvince('parent_district_of_birth','parent_province_of_birth')">
+								            	<option style="display: none">-- select the province --</option>
+								            	
+								            </select>
+								            <select id="parent_district_of_birth" name="parent_district_of_birth">
+								            	<option style="display: none">-- select the district --</option>
+								         
+								            </select>
+								            <select id="parent_town_of_birth" name="parent_town_of_birth">
+								            	<option style="display: none">-- select the town --</option>
+								            	
+								            </select>
+								            
+								        <br/><br/>
+								        <br/>    
+								        </fieldset>
+								        
+								        <fieldset>
+								        <legend> Card's Details </legend>
+								        	<label for="cardNumber">Card No: </label>
+								            <input class="cardNumber" name="card_no" id="card_no" type="text" size="8" maxlength="8" />
+								            <label for="Date of Issue">Date card was issued: </label>
+								            <input id="date_of_issue" name="date_of_issue" type="date" />
+								            <label for="Date of Birth">Renunciation Date: </label>
+								            <input id="renounce_date" name="renounce_date" type="date" />
+								        <br/><br/>
+								        </fieldset>
+								        
+								        <p>
+								            <input id="confirmButton" type="button" value="Done" style="display:"  onclick="confirmForm()" />
+								            <input id="submitButton" type="submit" value="Click Here to Complete" style="display: none"/>
+								        </p>
+								        </form>
+							</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Left Side Intro -->
+							<section id="intro">
+								<a href="#"><img src="images/Coat_of_Arms.png" alt="" /></a>
+								<header>
+									<h2>NRC Registration</h2>
+									<p class="motto_placeholder">Project motto or mission will be inserted here</a></p>
+								</header>
+							</section>
+
+
+						<!-- About -->
+							<section class="blurb">
+								<h2>About</h2>
+								<p class="about_placeholder">The following is placeholder information. The following is placeholder information.The following is placeholder information. The following is placeholder information. The following is placeholder information. </p>
+								<ul class="actions">
+									<li><a href="#" class="button">Learn More</a></li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+									<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+								<p class="copyright">&copy; Untitled. Design: Copyright Information</a>. Images: <a></a>.</p>
+							</section>
+
+					</section>
+
+			</div>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="assets/js/jquery.min.js" ></script>
+	<script type="text/javascript" src="assets/js/confirm.js"></script>
+	<script type="text/javascript" src="/javascripts/app.js"></script>
+	
+	</body>
+	
+</html>
